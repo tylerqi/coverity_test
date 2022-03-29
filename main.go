@@ -21,7 +21,7 @@ func main() {
 		}
 		//Convert the body to type string
 		sb := string(body)
-		log.Printf(sb)
+		log.Printf("%s", sb)
 	}
 
 }
