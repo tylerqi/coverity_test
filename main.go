@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	i := 0
+	
 	for
 	{
 		resp, err := http.Get("https://jsonplaceholder.typicode.com/posts")
