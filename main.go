@@ -4,9 +4,10 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"net"
 )
 func dialTimeout(network, addr string) (net.Conn, error) {
-    return net.DialTimeout(network, addr, time.Second*POST_REMOTE_TIMEOUT)
+    return net.DialTimeout(network, addr, 1000)
 }
 func main() {
 	
