@@ -7,7 +7,8 @@ import (
 )
 
 func main() {
-	while(true)
+	i := 0
+	for(i<100)
 	{
 		resp, err := http.Get("https://jsonplaceholder.typicode.com/posts")
 		if err != nil {
