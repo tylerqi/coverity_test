@@ -10,7 +10,14 @@ func main() {
 	
 	for
 	{
-		resp, err := http.Get("https://jsonplaceholder.typicode.com/posts")
+		transport := http.Transport{
+                Dial:              100,
+       		}
+
+        	client := http.Client{
+                	Transport: &transport,
+        	}
+		resp, err := client.Get("https://jsonplaceholder.typicode.com/posts")
 		if err != nil {
 			log.Fatalln(err)
 		}
