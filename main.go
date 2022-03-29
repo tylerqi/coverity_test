@@ -5,13 +5,15 @@ import (
 	"log"
 	"net/http"
 )
-
+func dialTimeout(network, addr string) (net.Conn, error) {
+    return net.DialTimeout(network, addr, time.Second*POST_REMOTE_TIMEOUT)
+}
 func main() {
 	
 	for
 	{
 		transport := http.Transport{
-                Dial:              100,
+                Dial:              dialTimeout,
        		}
 
         	client := http.Client{
